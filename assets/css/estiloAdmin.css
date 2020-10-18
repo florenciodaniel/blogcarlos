@@ -1,0 +1,846 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20/03/2018, 00:35:30
+    Author     : daniel
+*/
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+* {
+  padding:0;
+  margin:0;
+  vertical-align:baseline;
+  list-style:none;
+  border:0;
+  list-style-type:none;
+  max-width: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
+
+
+ol, ul {
+  list-style: none;
+}
+
+/*///////////////// BOOT //////////////////////////////////////////////*/
+
+
+hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 5px;
+  background-color: black;
+}
+
+
+
+a{
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+}
+.clear{clear: both;}
+body{
+
+}
+.naoMostrar{
+  display: none;
+}
+.naoAparecer{
+  visibility: hidden;
+}
+.titulo{
+  font-size: 1.8em;
+  padding: 0.6em;
+}
+.txtcenter{
+  text-align: center;
+
+}
+.blocoFamilia{
+  /*   width: 100%;
+     min-height: 550px;
+     background-color: red;*/
+
+}
+.blocoPai{
+  width: 100%;
+  margin: auto;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.blocoFilho{
+  width: 46%;
+  background-color: #b9bdbf;
+  margin-top: 15px;
+  margin-left: 2%;
+  padding: 2%;
+
+
+}
+.blocoFilho img{
+
+  height: 100px;
+  width: auto; 
+
+}
+.busca{
+  width: 20%;
+  margin-left: 40%;
+  padding: 5px;
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #1865e0;
+}
+.busca:hover{
+  background-color: #a4d0f2;
+}
+.formUm{
+  width: 100%;
+  margin: auto;
+
+
+  padding: 10px;
+}
+.formDois{
+  width: 100%;
+  display: flex; 
+
+  justify-content: flex-end;
+}
+.formFoto{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.formFoto img{
+  width:180px;
+  height: 180px;
+  margin-right: 20px;
+  margin-top: 10px;
+  border: 1px solid #424141;
+  padding: 4px;  
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px #1865e0;
+}
+
+.paragrafo{
+  font-size: 1.4em;
+  line-height: 1.4em; 
+  padding-top: 10px;
+  padding-right: 6px;
+
+}
+.paragrafo_titulo{
+  width: 100%;
+  text-align: center;
+}
+.paragrafo_titulo p{
+  
+  text-align: center;
+  font-size: 1.4em;
+  line-height: 1.4em; 
+  padding-top: 10px;
+
+}
+
+.input{
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #1865e0;
+  margin-top: 10px;
+  width: 40%;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  margin-right: 16%;
+}
+.input:hover{
+  background-color: #a4d0f2;
+}
+.submit{
+  margin-left: 42%;
+  font-size: 1.6em;
+  line-height: 1.6em;
+  background: -moz-linear-gradient(90deg, rgba(98,255,59,1) 0%, rgba(0,168,0,1) 50%, rgba(98,255,59,1) 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(98,255,59,1)), color-stop(50%, rgba(0,168,0,1)), color-stop(100%, rgba(98,255,59,1))); /* safari4+,chrome */
+  background: -webkit-linear-gradient(90deg, rgba(98,255,59,1) 0%, rgba(0,168,0,1) 50%, rgba(98,255,59,1) 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(90deg, rgba(98,255,59,1) 0%, rgba(0,168,0,1) 50%, rgba(98,255,59,1) 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(90deg, rgba(98,255,59,1) 0%, rgba(0,168,0,1) 50%, rgba(98,255,59,1) 100%); /* ie10+ */
+  background: linear-gradient(0deg, rgba(98,255,59,1) 0%, rgba(0,168,0,1) 50%, rgba(98,255,59,1) 100%); /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62FF3B', endColorstr='#62FF3B',GradientType=0 ); /* ie6-9 */
+  cursor: pointer;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #1865e0;
+  margin-top: 10px;
+}
+.submit:hover{
+  background: linear-gradient(0deg, rgba(255,150,51,1) 0%, rgba(255,10,10,1) 50%, rgba(255,164,54,1) 100%);
+  color: white;
+}
+.submitFoto{
+  margin-right: 16%;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  background: -moz-linear-gradient(90deg, rgba(98,255,59,1) 0%, rgba(0,168,0,1) 50%, rgba(98,255,59,1) 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(98,255,59,1)), color-stop(50%, rgba(0,168,0,1)), color-stop(100%, rgba(98,255,59,1))); /* safari4+,chrome */
+  background: -webkit-linear-gradient(90deg, rgba(98,255,59,1) 0%, rgba(0,168,0,1) 50%, rgba(98,255,59,1) 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(90deg, rgba(98,255,59,1) 0%, rgba(0,168,0,1) 50%, rgba(98,255,59,1) 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(90deg, rgba(98,255,59,1) 0%, rgba(0,168,0,1) 50%, rgba(98,255,59,1) 100%); /* ie10+ */
+  background: linear-gradient(0deg, rgba(98,255,59,1) 0%, rgba(0,168,0,1) 50%, rgba(98,255,59,1) 100%); /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62FF3B', endColorstr='#62FF3B',GradientType=0 ); /* ie6-9 */
+  cursor: pointer;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #1865e0;
+  margin-top: 10px;
+}
+.submitFoto:hover{
+  background: linear-gradient(0deg, rgba(255,150,51,1) 0%, rgba(255,10,10,1) 50%, rgba(255,164,54,1) 100%);;
+  color: white;
+}
+
+.formTable{
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+  background-color:#e3e8e3;
+  padding: 10px; 
+}
+.submitTable{
+  margin-left: 20%;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  background-color: #2ef920;
+  cursor: pointer;
+}
+.submitTable:hover{
+  background: linear-gradient(0deg, rgba(255,150,51,1) 0%, rgba(255,10,10,1) 50%, rgba(255,164,54,1) 100%);
+  color: white;
+}
+.submitBaixa{
+  right: 10px;
+  font-size: 1em;
+  line-height: 1.3em;
+  background-color: #2ef920;
+  cursor: pointer;
+}
+.inputBaixa{
+  width: 20%;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  margin-right: 8%;
+  margin: 3px;
+}
+.formUsu{
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  background-color:#e3e8e3;
+  padding: 10px;
+}
+.inputUsu:hover{
+  background-color: #a4d0f2;
+}
+
+.aprovado{
+  width: 100%;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  background-color: #2ef920;
+  text-align: center;
+  border: 2px solid blue;
+}
+.desaprovado{
+  width: 100%;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  background-color: #f91616;
+  text-align: center;
+  border: 2px solid blue;
+}
+
+/*///////////////// template admin //////////////////////////////////////////////*/
+.container_admin{
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+
+}
+.container_menu_left{
+  width: 15%;
+  min-height: 100vh;
+  background-color: #3e6be8;
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+
+
+
+}
+.menu_left_perfil{
+  width: 80%;
+
+
+  margin: 20px auto;
+
+}
+.menu_left_perfil_foto{
+  width: 80px;
+  height: 80px;
+  margin: 10px auto;
+  border-radius: 50%;
+
+}
+.menu_left_perfil_foto img{
+  width: 80px;
+  height: 80px;
+  border: 1px solid red;
+  border-radius: 50%;
+  box-shadow: 0px 0px 8px red;
+  object-fit: cover;
+
+}
+.menu_left_perfil_admin{
+
+}
+.menu_left_perfil_admin p{
+  text-align: center;
+  font-size: 22px;
+}
+.menu_left_menu{
+
+  margin-top: 60px;   
+
+}
+.menu_left_menu ul li{
+  text-align: center;
+  background: linear-gradient(0deg, rgba(92,163,255,1) 0%, rgba(0,0,128,1) 50%, rgba(41,134,255,1) 100%);
+  margin: 20px 5px;
+  font-size: 26px;
+  padding: 6px;
+  border-radius: 5px;
+
+}
+.menu_left_menu ul li:hover{
+  background: linear-gradient(0deg, rgba(255,150,51,1) 0%, rgba(255,10,10,1) 50%, rgba(255,164,54,1) 100%);
+
+}
+.menu_left_menu ul li a{
+
+  color: white;
+  display: block;
+
+}
+.menu_left_menu ul li a:hover{
+
+
+
+}
+/*.menu_left_menu ul li ul li{
+    display: none;
+}
+.menu_left_menu ul li:hover ul li{
+   display: block; 
+}*/
+.menu_left_menu ul li .menu_hover ul li{
+  display: none;
+}
+.menu_left_menu ul li:hover .menu_hover ul li{
+  display: block; 
+
+}
+.menu_hover{
+  position: relative;
+  position: absolute;
+  left: 94%;
+  top: 60px;
+  height: 94vh;
+  background-color: rgba(62, 107, 232,.5);
+  z-index: 5000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+}
+.menu_hover ul li{
+  width: 300px;
+  font-size: 15px;
+  margin-top: -2px;
+
+
+}
+
+.container_supAdmin{
+  width: 85%;
+  position: relative;
+  left: 15%;
+
+
+  /*    background-color: red;  */
+}
+
+.menu_sup{
+  width: 85%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #3e6be8;
+  position: fixed;
+  z-index: 2500;
+  padding-right: 60px;
+
+
+
+}
+
+.menu_sup{
+
+  /*       display: flex;
+         flex-flow: row wrap;
+         justify-content: space-around;*/
+}
+.menu_sup ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu_sup li button{
+  display: block;   
+  margin-left: 25px;
+  font-size: 1.4em;
+  padding: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: linear-gradient(0deg, rgba(92,163,255,1) 0%, rgba(0,0,128,1) 50%, rgba(41,134,255,1) 100%);
+  border-radius: 6px;
+  box-shadow: 3px 3px 5px #d3d6e5;
+  border: 1px solid #3d57db;
+}
+.menu_sup li button:hover{
+  background: linear-gradient(0deg, rgba(255,150,51,1) 0%, rgba(255,10,10,1) 50%, rgba(255,164,54,1) 100%);
+}
+.menu_sup li button a{
+  color: white;
+
+}
+.menu_sup li button:hover{
+
+  /*    background-color: orange;*/
+}
+/*---------------------------------------------------------------------
+-----------------------------------------------------------------------
+---------------------------------------------------------------------*/
+.containerConteudo{
+  width: 100%;
+  min-height: 92vh;
+  margin-top: 60px;
+  /*        background-image: url(../../assets/img/back_ac.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-attachment: fixed;*/
+
+  background-color: #d6d4d4; 
+}
+.view_container{
+  width: 100%; 
+}
+
+
+
+/*///////////////// VENDA //////////////////////////////////////////////*/
+
+.venda_container{
+  width: 100%;
+  background-color: orange;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5001;
+}
+.cancelador{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.cancelar label{
+  margin: 10px;
+  display: block;
+  padding: 10px;
+  background-color: #565859;
+  font-size: 18px;
+  cursor: pointer;
+  color: #fff;
+  border-bottom: solid 2px #aaa;
+}
+.cancelar label:hover{
+  background-color: orange;
+}
+.cancelar ul{
+  width: 100%;
+  list-style: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: all .4s linear;
+}
+.cancelar input{
+  display: block;
+}
+.cancelar ul li a{
+  width: 100%;
+  height: 20px;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  background-color: #fafafa;
+  color: #333;
+  border-bottom: solid 2px #aaa;
+}
+.cancelar ul li a:hover{
+  background-color: #9CF;
+}
+.cancelar input:checked ~ ul{
+  height: auto;
+  max-height: 200px;
+
+}
+/*///////////////// GALERIA //////////////////////////////////////////////*/
+.galeria_bloco{
+  width: 100%;
+
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.galeria_part{
+  width: 30%;
+
+  background-color: white;
+  margin-top: 30px;
+}
+.imagenDaGaleria{
+  width: 100%;
+  height: 80px;
+
+  margin: auto;
+}
+.imagenDaGaleria img{
+  max-width: 90%;
+  max-height: 90%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 100;
+}
+.paragf{
+  font-size: 8px;
+  text-align: initial;
+  padding: 6px;
+  color: #6a6d6c;
+
+}
+/*///////////////// POST //////////////////////////////////////////////*/
+.galeria_bloco{
+  width: 100%;
+
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.post_part{
+  width: 30%;
+
+  background-color: white;
+  margin-top: 30px;
+}
+.imagenDoPost{
+  width: 100%;
+  height: 80px;
+
+  margin: auto;
+}
+.imagenDoPost img{
+  max-width: 90%;
+  max-height: 90%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 100;
+}
+.paragf{
+  font-size: 1em;
+  text-align: center;
+  padding: 6px;
+  color: #6a6d6c;
+
+}
+.fotos_edicao{
+  width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    
+    
+}
+
+.trocar_foto_edicao img{
+    width: 300px;
+  height: 300px;
+  margin: 15px 15px;
+  border: 1px solid #424141;
+  padding: 4px;  
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px #1865e0;
+  
+  object-fit: cover;
+}
+
+
+
+
+/*///////////////// DEPOIMENTOS //////////////////////////////////////////////*/
+
+.depoimentos{
+  width: 100%;
+  background-color: #cfb2ff;
+}
+.depoimentos_titulo{
+  width: 100%;
+  font-size: 38px;
+  text-align: center;
+  color: #515951;
+  padding: 25px;
+}
+.depoimentos_bloco{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.depoimentos_part{
+  width: 16%;
+  background-color: white;
+  margin: 30px;
+  padding: 10px;
+}
+.depoimentos_part_edita{
+  width: 50%;
+  background-color: white;
+  margin: 30px;
+  padding: 10px;
+}
+.depoimentos_part_edita img{
+  width: 20%;
+  padding: 5%;
+}
+.depoimentos_part img{
+  width: 90%;
+  padding: 5%;
+}
+.depoimentos_part h2{
+  text-align: center;
+  font-size: 28px;
+  padding: 10px;
+
+}
+.textao{
+  width: 80%;
+  height: 180px;
+  margin-left: 10%;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #1865e0;
+  font-size: 1.4em;
+
+}
+.paragrafo_texto{
+  margin-left: 10%;
+  font-size: 1.4em;
+  line-height: 1.4em;
+  margin-top: 10px;
+}
+/*///////////////// MODAL //////////////////////////////////////////////*/
+#modal{
+  background-color: rgba(0,0,0,0.0);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.modal-box{
+  background-color: rgba(255,288,255,1);
+  position: absolute;
+  width: 60%;
+  height: 300px;
+  left: 50%;
+  top: 50%;
+  margin-left: -30%;
+  margin-top: -150px;
+  z-index: 2000;
+}
+.display_model{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.submitmodel{
+  width: 300px;
+  margin: 20px;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  background-color: #2ef920;
+  text-align: center;
+  cursor: pointer;
+}
+.submitmodel:hover{
+  background-color: #f91616;
+  color: white;
+}
+.fechar{
+  width: 300px;
+  margin: 20px;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  background-color: #2ef920;
+  text-align: center;
+  cursor: pointer;
+}
+.fechar:hover{
+  background-color: #f91616;
+  color: white;
+}
+.txtmodal{
+  font-size: 2em;
+  padding: 0.8em; 
+  line-height: 1.2em;
+  text-align: center;
+}
+#modalacionado{
+  background-color: rgba(0,0,0,0.8);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+
+}
+/*///////////////// CMS //////////////////////////////////////////////*/
+
+.input_selecao{
+  width: 100%;
+}
+.input_selecao input{
+  width: 60%;
+  margin-left: 20%;
+
+}
+.input_selecao img{
+  width: 60%;
+  margin-left: 20%;
+  margin-bottom: 30px;
+}
+
+/*____CMS adicionar postagem_____________*/
+.adicionar_container{
+  width: 100%;
+  min-height: 90vh;
+
+
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+
+}
+/*____CMS adicionar pagina_____________*/
+
+
+
+
+
+
+/*///////////////// FOOTER //////////////////////////////////////////////*/
+.rodape{
+  width: 85%;
+  position: relative;
+  left: 15%;
+  height: 7vh;
+  text-align: center;
+  font-size: 8px;
+  background-color:  #3e6be8;
+  padding: 6px;
+  bottom: 0;
+
+
+}
+/*///////////////// ACESSO NEGADO //////////////////////////////////////////////*/
+.acesso_negado{
+  width: 100%;
+}
+.acesso_negado p{
+  text-align: center;
+  font-size: 2.4em;
+  padding-top: 30vh;
+  color: #494541;
+  text-shadow: white 2px 2px 3px;
+}
+/*///////////////// TROCAR FOTO //////////////////////////////////////////////*/
+.trocar_foto{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  height: 350px;
+}
+.trocar_foto img{
+  width:380px;
+  height: auto;
+  border: 1px solid #424141;
+  padding: 4px;  
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px #1865e0;
+  margin-left: 50px;
+  object-fit: cover;
+
+}
+
+/*///////////////// FINANCEIRO//////////////////////////////////////////////*/
+
+/*-----graficos-------*/
+
+.total_venda_por_dia{
+  width: 450px;
+
+  background-color: #6bd3c2;
+}
+
